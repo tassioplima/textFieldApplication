@@ -14,21 +14,23 @@
 
 @implementation ViewController
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField;
-{
-   
 
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"O seu número é:" message:self.mainTextField.text delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+- (void)viewDidLoad {
+    [super viewDidLoad];
     
-    [alert show];
+     self.mainTextField.keyboardType = UIKeyboardTypeNumberPad;
     
-    self.mainTextField.keyboardType = UIKeyboardTypeNumberPad;
-
-    return YES;
+    self.mainTextField.clearButtonMode = UITextFieldViewModeAlways;
     
-    
-
+    // Do any additional setup after loading the view, typically from a nib.
 }
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
 
 
 -(BOOL)verificarSeEhPrimo:(NSInteger)numero
@@ -92,6 +94,7 @@
     
     
     UIAlertView* alerta = [[UIAlertView alloc] initWithTitle:@"Será que é um número Primo?" message:mensagem delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    
 
     [alerta show];
     
@@ -99,10 +102,4 @@
     
 
 
-
-
-
-
-- (IBAction)cleanText:(UITextFieldViewMode *)sender {
-}
 @end

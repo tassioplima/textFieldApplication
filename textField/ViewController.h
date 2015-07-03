@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *mainTextField;
 
+@property (nonatomic) UITextFieldViewMode clearButtonMode;
 
 
 @end
