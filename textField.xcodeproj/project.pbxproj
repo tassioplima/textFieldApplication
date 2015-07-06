@@ -14,6 +14,7 @@
 		4057BF2C1B4700AF0046643E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4057BF2B1B4700AF0046643E /* Images.xcassets */; };
 		4057BF2F1B4700AF0046643E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4057BF2D1B4700AF0046643E /* LaunchScreen.xib */; };
 		4057BF3B1B4700AF0046643E /* textFieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4057BF3A1B4700AF0046643E /* textFieldTests.m */; };
+		4091CEDB1B4ABBB300FF706F /* verificardorPar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4091CEDA1B4ABBB300FF706F /* verificardorPar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		4057BF341B4700AF0046643E /* textFieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = textFieldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4057BF391B4700AF0046643E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4057BF3A1B4700AF0046643E /* textFieldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = textFieldTests.m; sourceTree = "<group>"; };
+		4091CED91B4ABBB300FF706F /* textField-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "textField-Bridging-Header.h"; sourceTree = "<group>"; };
+		4091CEDA1B4ABBB300FF706F /* verificardorPar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = verificardorPar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				4057BF2B1B4700AF0046643E /* Images.xcassets */,
 				4057BF2D1B4700AF0046643E /* LaunchScreen.xib */,
 				4057BF1E1B4700AF0046643E /* Supporting Files */,
+				4091CEDA1B4ABBB300FF706F /* verificardorPar.swift */,
+				4091CED91B4ABBB300FF706F /* textField-Bridging-Header.h */,
 			);
 			path = textField;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				4057BF271B4700AF0046643E /* ViewController.m in Sources */,
 				4057BF241B4700AF0046643E /* AppDelegate.m in Sources */,
 				4057BF211B4700AF0046643E /* main.m in Sources */,
+				4091CEDB1B4ABBB300FF706F /* verificardorPar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,9 +353,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = textField/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "textField/textField-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -357,9 +366,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = textField/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "textField/textField-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -416,6 +427,7 @@
 				4057BF401B4700AF0046643E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4057BF411B4700AF0046643E /* Build configuration list for PBXNativeTarget "textFieldTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +436,7 @@
 				4057BF431B4700AF0046643E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

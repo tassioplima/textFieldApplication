@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "textField-Swift.h"
+
 
 @interface ViewController ()
 
@@ -18,16 +20,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-     self.mainTextField.keyboardType = UIKeyboardTypeNumberPad;
-    
+    self.mainTextField.keyboardType = UIKeyboardTypeNumberPad;
     self.mainTextField.clearButtonMode = UITextFieldViewModeAlways;
+
     
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    
+  
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+    
+    
 }
 
 
@@ -62,21 +68,19 @@
     
 }
 
-- (IBAction)clearButton:(UIButton *)sender {
-   
-    
-    self.mainTextField.text = @"";
-    
-    
-}
 
 
 - (IBAction)verifyNumber:(UIButton*)sender {
+    
+    
+    
     
     NSInteger testePrimo = self.mainTextField.text.intValue;
     BOOL isPrimo =  [self verificarSeEhPrimo:testePrimo];
     NSLog(@"%d", isPrimo);
     [self showResultAlert:isPrimo];
+    
+    
     
     
     
@@ -87,10 +91,14 @@
     NSString* mensagem;
     
     if (ehPrimo) {
+        
+        
     mensagem = @"Seu número é primo";
     } else{
         mensagem = @"Seu número não é primo";
         }
+    
+    
     
     
     UIAlertView* alerta = [[UIAlertView alloc] initWithTitle:@"Será que é um número Primo?" message:mensagem delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
@@ -99,7 +107,8 @@
     [alerta show];
     
     }
-    
+
+
 
 
 @end
